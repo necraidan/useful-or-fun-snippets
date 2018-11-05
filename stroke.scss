@@ -1,3 +1,6 @@
+/**
+ * This snippets create a stroke around letters
+ */
 @function stroke($stroke, $color) {
     $shadow: ();
     $from: $stroke * -1;
