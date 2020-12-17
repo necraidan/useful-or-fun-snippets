@@ -1,0 +1,14 @@
+    /**
+     */
+    getSomethingOperator(id: string,) {
+        return function <T>(source: Observable<T>) {
+            const switchMapSomething = (obj: any): Observable<any> => {
+                return this.service.searchPOST({
+                    id
+                    body: { id }
+                });
+            };
+
+            return source.pipe(switchMap(switchMapSomething), publish(), refCount());
+        }.bind(this);
+    }
