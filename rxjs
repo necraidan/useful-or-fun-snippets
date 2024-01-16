@@ -12,3 +12,12 @@
             return source.pipe(switchMap(switchMapSomething), publish(), refCount());
         }.bind(this);
     }
+
+
+
+        merge(
+          ...viewModel.registration
+            .map((p) => p.costsForm.controls)
+            .flat(1)
+            .map((c) => c.valueChanges),
+        ).subscribe((v) => console.log(v));
